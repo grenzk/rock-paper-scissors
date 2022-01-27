@@ -14,26 +14,26 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === choices[0]) {
     if (computerSelection === choices[2]) {
       playerScore++;
-      return `You Win! ${playerSelection} beats ${computerSelection}`;
+      return `You Win! ${playerSelection} beats ${computerSelection}!`;
     } else {
       computerScore++;
-      return `You Lose! ${computerSelection} beats ${playerSelection}`;
+      return `You Lose! ${computerSelection} beats ${playerSelection}!`;
     }
   } else if (playerSelection === choices[1]) {
     if (computerSelection === choices[0]) {
       playerScore++;
-      return `You Win! ${playerSelection} beats ${computerSelection}`;
+      return `You Win! ${playerSelection} beats ${computerSelection}!`;
     } else {
       computerScore++;
-      return `You Lose! ${computerSelection} beats ${playerSelection}`;
+      return `You Lose! ${computerSelection} beats ${playerSelection}!`;
     }
   } else if (playerSelection === choices[2]) {
     if (computerSelection === choices[1]) {
       playerScore++;
-      return `You Win! ${playerSelection} beats ${computerSelection}`;
+      return `You Win! ${playerSelection} beats ${computerSelection}!`;
     } else {
       computerScore++;
-      return `You Lose! ${computerSelection} beats ${playerSelection}`;
+      return `You Lose! ${computerSelection} beats ${playerSelection}!`;
     }
   }
 }
@@ -43,6 +43,7 @@ function game() {
     playerSelection = prompt("Rock, Paper, or Scissors?");
     computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
+    console.log(`Player: ${playerScore} Computer: ${computerScore}`);
   }
 
   if (playerScore > computerScore) {
