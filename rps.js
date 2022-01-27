@@ -38,12 +38,29 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+function playerInput() {
+  playerSelection = prompt("Rock, Paper, or Scissors?");
+  if (
+    playerSelection === null ||
+    !playerSelection.match(/rock|paper|scissors/i)
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 function game() {
-  for (i = 0; i < 5; i++) {
-    playerSelection = prompt("Rock, Paper, or Scissors?");
-    computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`Player: ${playerScore} Computer: ${computerScore}`);
+  while (i < 5) {
+    if (playerInput() === true) {
+      computerSelection = computerPlay();
+      console.log(playRound(playerSelection, computerSelection));
+      console.log(`Player: ${playerScore} Computer: ${computerScore}`);
+      i++;
+    } else {
+      console.log("Please enter Rock, Paper, or Scissors only.");
+      continue;
+    }
   }
 
   if (playerScore > computerScore) {
@@ -60,4 +77,5 @@ let playerSelection;
 let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
+let i = 0;
 game();
