@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function playerInput() {
+function getPlayerInput() {
   playerSelection = prompt("Rock, Paper, or Scissors?");
   if (
     playerSelection === null ||
@@ -52,14 +52,13 @@ function playerInput() {
 
 function game() {
   while (i < 5) {
-    if (playerInput() === true) {
+    if (getPlayerInput() === true) {
       computerSelection = computerPlay();
       console.log(playRound(playerSelection, computerSelection));
       console.log(`Player: ${playerScore} Computer: ${computerScore}`);
       i++;
     } else {
-      console.log("Please enter Rock, Paper, or Scissors only.");
-      continue;
+      alert("Please enter Rock, Paper, or Scissors only.");
     }
   }
 
