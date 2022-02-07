@@ -1,3 +1,11 @@
+const choices = ["Rock", "Paper", "Scissors"];
+let playerSelection;
+let computerSelection;
+let playerScore = 0;
+let computerScore = 0;
+let i = 0;
+game();
+
 function computerPlay() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -70,11 +78,3 @@ function game() {
     console.log("It's a Tie!");
   }
 }
-
-const choices = ["Rock", "Paper", "Scissors"];
-let playerSelection;
-let computerSelection;
-let playerScore = 0;
-let computerScore = 0;
-let i = 0;
-game();
