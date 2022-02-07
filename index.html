@@ -4,20 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="rps.js" defer></script>
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <div>Classic Rock Paper Scissors Game</div>
-    <div>Five rounds to win!</div>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div class="container">
-      <div>Player : <span id="p-score">0</span></div>
-      <div>VS</div>
-      <div>Computer : <span id="c-score">0</span></div>
+    <div id="title">Classic Rock Paper Scissors Game</div>
+    <div id="header">Five rounds to win!</div>
+    <div class="moves-container">
+      <div class="player">
+        <img id="player-move" src="./images/rock.png" />
+        <div id="text">Player</div>
+      </div>
+      <div id="versus">VS</div>
+      <div class="computer">
+        <img id="computer-move" src="./images/rock.png" />
+        <div id="text">Computer</div>
+      </div>
+    </div>
+    <div class="scores">
+      <div id="p-score">0</div>
+      <div id="dash">-</div>
+      <div id="c-score">0</div>
+    </div>
+    <div class="selection">
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
     </div>
   </body>
 </html>
