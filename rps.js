@@ -42,6 +42,11 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+function getScore() {
+  document.getElementById("p-score").textContent = playerScore;
+  document.getElementById("c-score").textContent = computerScore;
+}
+
 function game() {
   // while (i < 5) {}
   const buttons = document.querySelectorAll("button");
@@ -50,16 +55,15 @@ function game() {
     button.addEventListener("click", () => {
       playerSelection = button.textContent;
       computerSelection = computerPlay();
-      console.log(playRound(playerSelection, computerSelection));
-      console.log(`Player: ${playerScore} Computer: ${computerScore}`);
+      playRound(playerSelection, computerSelection);
+      getScore();
     });
   });
-
-  if (playerScore > computerScore) {
+  /*if (playerScore > computerScore) {
     console.log("Victory!");
   } else if (computerScore > playerScore) {
     console.log("You Lost! Game Over.");
   } else {
     console.log("It's a Tie!");
-  }
+  } */
 }
