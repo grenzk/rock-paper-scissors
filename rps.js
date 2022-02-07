@@ -44,9 +44,16 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
   // while (i < 5) {}
-  computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(`Player: ${playerScore} Computer: ${computerScore}`);
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      playerSelection = button.textContent;
+      computerSelection = computerPlay();
+      console.log(playRound(playerSelection, computerSelection));
+      console.log(`Player: ${playerScore} Computer: ${computerScore}`);
+    });
+  });
 
   if (playerScore > computerScore) {
     console.log("Victory!");
