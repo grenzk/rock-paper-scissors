@@ -47,6 +47,11 @@ function getScore() {
   document.getElementById("c-score").textContent = computerScore;
 }
 
+function updateMoves(playerSelection, computerSelection) {
+  document.getElementById("p-move").src = `./images/${playerSelection}.png`;
+  document.getElementById("c-move").src = `./images/${computerSelection}.png`;
+}
+
 function game() {
   // while (i < 5) {}
   const inputs = document.querySelectorAll("input");
@@ -55,6 +60,7 @@ function game() {
     input.addEventListener("click", () => {
       playerSelection = input.value;
       computerSelection = computerPlay();
+      updateMoves(playerSelection, computerSelection);
       playRound(playerSelection, computerSelection);
       getScore();
     });
