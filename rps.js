@@ -49,11 +49,11 @@ function getScore() {
 
 function game() {
   // while (i < 5) {}
-  const buttons = document.querySelectorAll("button");
+  const inputs = document.querySelectorAll("input");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      playerSelection = button.textContent;
+  inputs.forEach((input) => {
+    input.addEventListener("click", () => {
+      playerSelection = input.value;
       computerSelection = computerPlay();
       playRound(playerSelection, computerSelection);
       getScore();

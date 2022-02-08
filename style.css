@@ -1,5 +1,6 @@
 #title,
-#header {
+#header,
+#select-text {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -30,14 +31,19 @@ img {
   gap: 10px;
 }
 
-button {
-  width: 100px;
-  padding: 20px;
+#move {
+  border-radius: 30%;
+}
+
+input {
+  width: 180px;
+  margin: 20px;
+  border-radius: 30%;
 }
 
 .scores {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
