@@ -12,32 +12,30 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    return "Tie!";
-  }
-
-  if (playerSelection === choices[0]) {
+    alert("Tie!");
+  } else if (playerSelection === choices[0]) {
     if (computerSelection === choices[2]) {
       playerScore++;
-      return `You Win! ${playerSelection} beats ${computerSelection}!`;
+      alert(`You Win! ${playerSelection} beats ${computerSelection}!`);
     } else {
       computerScore++;
-      return `You Lose! ${computerSelection} beats ${playerSelection}!`;
+      alert(`You Lose! ${computerSelection} beats ${playerSelection}!`);
     }
   } else if (playerSelection === choices[1]) {
     if (computerSelection === choices[0]) {
       playerScore++;
-      return `You Win! ${playerSelection} beats ${computerSelection}!`;
+      alert(`You Win! ${playerSelection} beats ${computerSelection}!`);
     } else {
       computerScore++;
-      return `You Lose! ${computerSelection} beats ${playerSelection}!`;
+      alert(`You Lose! ${computerSelection} beats ${playerSelection}!`);
     }
   } else if (playerSelection === choices[2]) {
     if (computerSelection === choices[1]) {
       playerScore++;
-      return `You Win! ${playerSelection} beats ${computerSelection}!`;
+      alert(`You Win! ${playerSelection} beats ${computerSelection}!`);
     } else {
       computerScore++;
-      return `You Lose! ${computerSelection} beats ${playerSelection}!`;
+      alert(`You Lose! ${computerSelection} beats ${playerSelection}!`);
     }
   }
 }
@@ -52,6 +50,19 @@ function updateMoves(playerSelection, computerSelection) {
   document.getElementById("c-move").src = `./images/${computerSelection}.png`;
 }
 
+function returnWinner() {
+  if (playerScore === 5) {
+    document.getElementById("message").textContent = "You Win!";
+    playerScore = computerScore = 0;
+    return getScore();
+  } else if (computerScore === 5) {
+    document.getElementById("message").textContent = "You Lost! Game Over!";
+    playerScore = computerScore = 0;
+    return getScore();
+  }
+  document.getElementById("message").textContent = null;
+}
+
 function game() {
   // while (i < 5) {}
   const inputs = document.querySelectorAll("input");
@@ -63,13 +74,7 @@ function game() {
       updateMoves(playerSelection, computerSelection);
       playRound(playerSelection, computerSelection);
       getScore();
+      returnWinner();
     });
   });
-  /*if (playerScore > computerScore) {
-    console.log("Victory!");
-  } else if (computerScore > playerScore) {
-    console.log("You Lost! Game Over.");
-  } else {
-    console.log("It's a Tie!");
-  } */
 }
