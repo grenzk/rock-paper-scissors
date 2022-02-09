@@ -1,5 +1,5 @@
 body {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 #title,
@@ -14,8 +14,8 @@ body {
 }
 
 #header,
-#text, 
-#select-text, 
+#text,
+#select-text,
 #p-score,
 #c-score {
   font-size: 30px;
@@ -54,7 +54,6 @@ img {
   gap: 10px;
 }
 
-
 input {
   width: 180px;
   margin: 20px;
@@ -65,4 +64,16 @@ input {
   display: flex;
   justify-content: center;
   gap: 16px;
+}
+
+.footer {
+  background-color: aliceblue;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
 }
