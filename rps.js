@@ -64,7 +64,6 @@ function returnWinner() {
 }
 
 function game() {
-  // while (i < 5) {}
   const inputs = document.querySelectorAll("input");
 
   inputs.forEach((input) => {
