@@ -1,5 +1,8 @@
 body {
   font-family: "Permanent Marker", cursive;
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
 }
 
 #title,
