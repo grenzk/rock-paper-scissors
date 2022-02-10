@@ -53,11 +53,11 @@ function returnWinner() {
   if (playerScore === 5) {
     document.getElementById("message").textContent = "You Win!";
     playerScore = computerScore = 0;
-    return getScore();
+    return setTimeout(getScore, 5000);
   } else if (computerScore === 5) {
     document.getElementById("message").textContent = "You Lost! Game Over!";
     playerScore = computerScore = 0;
-    return getScore();
+    return setTimeout(getScore, 5000);
   }
   document.getElementById("message").textContent = null;
 }
