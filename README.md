@@ -1,5 +1,7 @@
 # Rock Paper Scissors
 
+![game](./images/rock-paper-scissors.png)
+
 This project is a simple implementation of the "rock paper scissors" game. This will determine what I learned from each of the lessons under **_Foundations > JavaScript Basics_**. For the moment, this will only run on the browser console. A more improved version of this program will come later on with an added GUI.
 
 ### Update
