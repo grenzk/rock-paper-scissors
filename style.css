@@ -1,7 +1,7 @@
 body {
   font-family: "Permanent Marker", cursive;
   min-height: 400px;
-  margin-bottom: 100px;
+  margin-bottom: 55px;
   clear: both;
 }
 
@@ -78,5 +78,5 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
+  padding: 20px 0;
 }
