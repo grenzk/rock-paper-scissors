@@ -18,6 +18,10 @@ This project is a simple implementation of the "rock paper scissors" game. This 
 - Problem Solving
 - Understanding Errors
 
+## Live Demo
+
+Github Page (https://grenzk.github.io/rock-paper-scissors/)
+
 ## Source
 
 The Odin Project (https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors)
